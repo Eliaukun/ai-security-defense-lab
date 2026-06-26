@@ -1,21 +1,20 @@
-# AI Security Internship Portfolio
+# AI Security Defense Lab
 
-Target role: LLM-enabled security research / AI security red team intern.
+AI Security Defense Lab is a small Python security lab for evaluating LLM application risks and triaging security alerts with transparent, auditable rules.
 
-This portfolio is built around two small but complete projects that connect traditional cyber security experience with current AI security work:
+The repository contains two independent but related prototypes:
 
-- `llm-rag-agent-security-eval`: a lightweight evaluator for prompt injection, RAG poisoning, sensitive data exposure, and risky Agent tool calls.
-- `ai-soc-alert-triage`: an AI-ready SOC alert triage prototype that ranks alerts, maps common tactics, and generates analyst-friendly summaries.
+- `llm-rag-agent-security-eval`: evaluates prompt injection, RAG poisoning, sensitive data exposure, and risky Agent tool calls.
+- `ai-soc-alert-triage`: ranks SOC alerts, maps events to attack tactics, and generates analyst-oriented response notes.
 
-The code intentionally uses local sample data and standard Python libraries so it can be reviewed and run without private datasets, API keys, or offensive infrastructure.
+The code uses local sample data and standard Python libraries, so it can be reviewed and run without private datasets, API keys, or offensive infrastructure.
 
-## Why This Role
+## Design Goals
 
-The selected target position is **LLM-enabled security attack and defense / AI security red team intern**. It matches:
-
-- Web security, red team exercise, and blue team monitoring experience.
-- Practical familiarity with OWASP Top 10, common vulnerability reproduction, traffic analysis, and emergency response.
-- New AI security needs around prompt injection, RAG/Agent security, automated evaluation, and security alert reasoning.
+- Keep detection logic explicit and easy to audit.
+- Model LLM application security as a system problem, not only a prompt problem.
+- Provide reproducible sample cases for both AI security evaluation and SOC triage.
+- Avoid handling real secrets, private telemetry, or live offensive infrastructure.
 
 ## Repository Layout
 
@@ -32,10 +31,9 @@ The selected target position is **LLM-enabled security attack and defense / AI s
 |   |-- src/
 |   `-- tests/
 |-- docs/
-|   |-- target-role.md
-|   `-- project-cv-bullets.md
-`-- scripts/
-    `-- make_cv_docx.py
+|   |-- design-notes.md
+|   `-- rule-model.md
+`-- README.md
 ```
 
 ## Quick Start
@@ -58,3 +56,7 @@ Run tests:
 python -m unittest discover -s llm-rag-agent-security-eval/tests
 python -m unittest discover -s ai-soc-alert-triage/tests
 ```
+
+## Safety Boundary
+
+This repository is for defensive research and controlled testing. The sample cases are synthetic and intentionally limited. The tools do not exploit real systems, connect to external targets, collect credentials, or automate unauthorized access.

